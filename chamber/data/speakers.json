@@ -1,0 +1,82 @@
+[
+  {
+    "name": "Mr. Kojo Amoako",
+    "role": "Keynote Speaker",
+    "position": "Lead Consultant, Tebeldi Academy",
+    "website": "https://tebeldiacademy.com",
+    "image": "kojo-amoako.webp",
+    "description": "Presenter of the keynote address: 'My Business: Planning and Funding'. Panelist on Money, Investments and Business Management."
+  },
+  {
+    "name": "Mrs. Eugenia Addo",
+    "role": "Panelist",
+    "position": "Head, SME & Support, Access Bank Ghana",
+    "website": "https://www.accessbankplc.com",
+    "image": "eugenia-addo.webp",
+    "description": "Panelist discussing SME financing, business support services, and strategic business growth."
+  },
+  {
+    "name": "Mr. Makafui Tsikata",
+    "role": "Panelist",
+    "position": "Businessman",
+    "website": "#",
+    "image": "makafui-tsikata.webp",
+    "description": "Panelist sharing practical insights on business management, entrepreneurship, and investment strategies."
+  },
+  {
+    "name": "Mary A. Serwa Dickson",
+    "role": "Panelist",
+    "position": "Team Lead, Woman On A Mission",
+    "website": "#",
+    "image": "mary-serwa-dickson.webp",
+    "description": "Panelist focusing on leadership, entrepreneurship, and empowering businesses for sustainable growth."
+  },
+  {
+    "name": "Lady Perpetual Meg Annan",
+    "role": "Moderator",
+    "position": "Panel Discussion Moderator",
+    "website": "#",
+    "image": "perpetual-meg-annan.webp",
+    "description": "Moderator for the panel discussion on Money, Investments and Business Management."
+  },
+  {
+    "name": "B. Nana Duncan",
+    "role": "Presenter",
+    "position": "Business Bridge Instrument Launch Team",
+    "website": "#",
+    "image": "b-nana-duncan.webp",
+    "description": "Co-presenter for the official launch of the Business Bridge Instrument (BBI)."
+  },
+  {
+    "name": "Albert Adjei Laryea",
+    "role": "Presenter",
+    "position": "Business Bridge Instrument Launch Team",
+    "website": "#",
+    "image": "albert-adjei-laryea.webp",
+    "description": "Co-presenter for the official launch of the Business Bridge Instrument (BBI)."
+  },
+  {
+    "name": "Mr. Michael Asamani",
+    "role": "Guest Artist",
+    "position": "Musical Interlude",
+    "website": "#",
+    "image": "michael-asamani.webp",
+    "description": "Guest musician providing the musical interlude during the Business Bridge Summit."
+  },
+  {
+    "name": "Mr. Jojo Bediakoo",
+    "role": "Programme Coordinator",
+    "position": "Business Bridge Summit Coordinator",
+    "website": "#",
+    "image": "jojo-bediakoo.webp",
+    "description": "Coordinator responsible for planning and overseeing the Business Bridge Summit programme."
+  },
+  {
+    "name": "Rev. Priscilla",
+    "role": "Special Guest",
+    "position": "Welcome Remarks",
+    "website": "#",
+    "image": "rev-priscilla.webp",
+    "description": "Delivers the official welcome remarks during the opening ceremony of the Business Bridge Summit."
+  }
+]

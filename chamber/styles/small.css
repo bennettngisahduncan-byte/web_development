@@ -1249,30 +1249,6 @@ main {
 
 }
 
-.gold {
-
-    background: gold;
-
-    color: black;
-
-}
-
-.silver {
-
-    background: silver;
-
-    color: black;
-
-}
-
-.bronze {
-
-    background: peru;
-
-    color: white;
-
-}
-
 /* ============================================
    Discover Page
    ============================================ */
@@ -1703,4 +1679,24 @@ footer p {
 
 .membership-container .card:nth-child(4){
     animation-delay:.8s;
+}
+
+.page-intro{
+    max-width:850px;
+    margin:0 auto 2rem;
+    text-align:center;
+    color:#4a5568;
+    line-height:1.7;
+}
+
+.membership-level {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 6px 14px;
+    background-color: #D4A017;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: .8rem;
+    border-radius: 20px;
+    text-transform: uppercase;
 }

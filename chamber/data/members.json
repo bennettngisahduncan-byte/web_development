@@ -1,65 +1,41 @@
 [
-    {
-        "name": "Mr. Kojo Amoako",
-        "address": "Lead Consultant, Tebeldi Academy",
-        "phone": "Keynote Speaker",
-        "website": "https://www.tebeldi.com/",
-        "image": "kojoamoako.webp",
-        "membershipLevel": 3,
-        "description": "Empowering businesses through strategic consulting, leadership development, and diagnostic insights."
-    },
-    {
-        "name": "Mrs. Eugenia Add",
-        "address": "Head, SME & Support",
-        "phone": "Access Bank Ghana",
-        "website": "#",
-        "image": "goldencoastlogistic.webp",
-        "membershipLevel": 2,
-        "description": "Reliable SME and Support services across West Africa."
-    },
-    {
-        "name": "Green Earth Farms",
-        "address": "78 Agricultural Lane, Kumasi",
-        "phone": "+233 30 345 6789",
-        "website": "https://greenearthfarms.org",
-        "image": "eugeniaaddo.webp",
-        "membershipLevel": 1,
-        "description": "Sustainable organic farming and agricultural consulting."
-    },
-    {
-        "name": "Mr. Makafui Tsikata",
-        "address": "Businessman",
-        "phone": "Panelist",
-        "website": "#",
-        "image": "makafui.webp",
-        "membershipLevel": 3,
-        "description": "Comprehensive banking, investment, and financial advisory services."
-    },
-    {
-        "name": "Mary A. Serwa Dickson",
-        "address": "Team Lead, Woman On A Mission",
-        "phone": "Panelist",
-        "website": "#",
-        "image": "mary.webp",
-        "membershipLevel": 2,
-        "description": "Commercial and residential construction with modern engineering."
-    },
-    {
-        "name": "Heritage Arts & Crafts",
-        "address": "34 Cultural Center Road, Accra",
-        "phone": "+233 30 678 9012",
-        "website": "https://heritageartsgh.com",
-        "image": "heritagearts.webp",
-        "membershipLevel": 1,
-        "description": "Authentic Ghanaian art, crafts, and cultural merchandise."
-    },
-    {
-        "name": "Sunset Hospitality Group",
-        "address": "99 Ocean Boulevard, Accra",
-        "phone": "+233 30 789 0123",
-        "website": "https://sunsethospitality.com",
-        "image": "sunsethospitality.webp",
-        "membershipLevel": 3,
-        "description": "Premium hotels, restaurants, and event management services."
-    }
+  {
+    "name": "Mr. Kojo Amoako",
+    "address": "Lead Consultant, Tebeldi Academy",
+    "phone": "Keynote Speaker",
+    "website": "https://tebeldiacademy.com",
+    "membershipLevel": 3,
+    "image": "kojo-amoako.webp",
+    "description": "Empowering businesses through strategic consulting, leadership development and diagnostic insights."
+  },
+
+  {
+    "name": "Mrs. Eugenia Addo",
+    "address": "Head, SME & Support",
+    "phone": "Access Bank Ghana",
+    "website": "https://www.accessbankplc.com",
+    "membershipLevel": 2,
+    "image": "eugenia-addo.webp",
+    "description": "Reliable SME and Support services across West Africa."
+  },
+
+  {
+    "name": "Mr. Makafui Tsikata",
+    "address": "Businessman",
+    "phone": "Panelist",
+    "website": "#",
+    "membershipLevel": 3,
+    "image": "makafui.webp",
+    "description": "Comprehensive banking, investment and financial advisory services."
+  },
+
+  {
+    "name": "Mary A. Serwa Dickson",
+    "address": "Team Lead",
+    "phone": "Woman On A Mission",
+    "website": "#",
+    "membershipLevel": 2,
+    "image": "mary-serwa.webp",
+    "description": "Leadership development, mentoring and women's empowerment."
+  }
 ]
