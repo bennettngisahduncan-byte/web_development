@@ -138,6 +138,20 @@
         margin-bottom: 40px;
     }
 
+    .spotlight-card {
+    border-top: 5px solid #0B5D3B !important;
+}
+
+.spotlight-card h3 {
+    color: #0B5D3B !important;
+}
+
+.spotlight-card a {
+    color: #D4A017 !important;
+}
+
+    
+
     /* ============================================
        Join Page Desktop Layout
        ============================================ */
@@ -164,6 +178,7 @@
 
     #discover-page .Main-title {
         grid-area: title;
+        color: #0B5D3B;
     }
 
     #discover-page .side-bar {
@@ -171,6 +186,11 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+        .article-01,
+        .article-02,
+        .article-03 {
+        border-top: 5px solid #D4A017;
+}
     }
 
     #calendar {
@@ -195,7 +215,21 @@
         padding: 30px 20px;
         flex-wrap: wrap;
         gap: 20px;
+        background: #0B5D3B;
+        color: white;
     }
+
+    footer p {
+    color: white;
+}   
+
+    .social a {
+    color: #D4A017;
+}
+
+    .social a:hover {
+    color: white;
+}
 
     .footer-info,
     .social,
