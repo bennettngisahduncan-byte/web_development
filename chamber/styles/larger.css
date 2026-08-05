@@ -33,6 +33,7 @@
 
     nav a {
         padding: 12px 24px;
+        color: #0B5D3B;
     }
 
     /* ============================================
@@ -67,7 +68,7 @@
         right: auto;
         bottom: auto;
         transform: translateY(-50%);
-        background-color: rgba(31, 46, 59, 0.85);
+        background-color: rgba(11, 93, 59, 0.90);
         color: #ffffff;
         padding: 25px;
         border-radius: 10px;
@@ -95,9 +96,13 @@
         border-radius: 5px;
         cursor: pointer;
         font-weight: bold;
-        background-color: #ffcc00;
-        color: #000;
+        background-color: #D4A017;
+        color: #ffffff;
     }
+
+    .call-to-action button.join-us:hover {
+    background-color: #0B5D3B;
+}
 
     .event-main-box {
         display: grid;
@@ -113,7 +118,7 @@
         border-radius: 8px;
         padding: 20px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        border-top: 4px solid #0d3b66;
+        border-top: 4px solid #D4A017;
     }
 
     .event-main h2,
@@ -121,8 +126,8 @@
     .weather-forecast h2 {
         margin-top: 0;
         font-size: 1.2rem;
-        color: #0d3b66;
-        border-bottom: 2px solid #f4d35e;
+        color: #0B5D3B;
+        border-bottom: 2px solid #D4A017;
         padding-bottom: 6px;
     }
 
