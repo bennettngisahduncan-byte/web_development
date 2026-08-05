@@ -286,12 +286,12 @@ nav ul li a.nav-a.active {
    ============================================ */
 @media screen and (min-width: 641px) {
 
-    .local-photos img,
+    .summit-highlights img,
     .discover-card img {
         transition: transform 0.3s ease, filter 0.3s ease;
     }
 
-    .local-photos img:hover,
+    .summit-highlights img:hover,
     .discover-card img:hover {
         transform: scale(1.03);
         filter: brightness(1.05);
