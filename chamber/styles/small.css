@@ -21,11 +21,11 @@
     --headline-color-on-white: var(--oxford-blue-3);
     --headline-color-on-color: var(--alice-blue);
 
-    /* Navigation Colors */
-    --nav-link-color: var(--alice-blue);
-    --nav-background-color: var(--yale-blue);
-    --nav-hover-link-color: var(--oxford-blue-3);
-    --nav-hover-background-color: var(--true-blue);
+  /* Navigation Colors */
+    --nav-link-color: #ffffff;
+    --nav-background-color: #0B4F2F;   /* ET Business Club Green */
+    --nav-hover-link-color: #0B4F2F;
+    --nav-hover-background-color: #D4A017; /* Gold */
 
     /* Fonts */
     --open-sans: "Open Sans", sans-serif;
