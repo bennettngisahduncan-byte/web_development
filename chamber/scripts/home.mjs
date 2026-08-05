@@ -64,7 +64,7 @@ displayForecast(dataForecast);
 
 function displayCurrentWeather(data) {
     // 1. Define the iconUrl using the data returned from the API
-    const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+    const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
     const description = data.weather[0].description;
 
     // 2. Build your weather HTML, adding explicit width and height to prevent layout shifts
