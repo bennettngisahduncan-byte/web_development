@@ -76,31 +76,38 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 10px 15px;
-    position: relative;
+    gap: 12px;
 }
 
 .logo-chamber {
     width: 60px;
-    height: auto;
-    border-radius: 4px;
+    height: 60px;
+    flex-shrink: 0;
 }
 
 .nameHeader {
-    font-size: 1.2rem;
-    line-height: 1.2;
     flex: 1;
-    margin-left: 15px;
+    margin: 0;
+    font-size: 1.1rem;
+    line-height: 1.2;
+    color: #fff;
 }
 
-/* Hamburger Menu (Mobile Only) */
 #menu {
+    flex-shrink: 0;
     display: block;
     font-size: 2rem;
     background: none;
     border: none;
-    color: var(--alice-blue);
+    color: #fff;
     cursor: pointer;
-    padding: 5px 10px;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
 #menu::before {
