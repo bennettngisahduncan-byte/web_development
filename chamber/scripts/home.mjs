@@ -10,8 +10,32 @@ function loadEvents() {
 
     // Sample events data for the Chamber
     const events = [
-        { title: "Annual Business Luncheon", date: "August 15, 2026", location: "Kempinski Hotel, Accra" },
-        { title: "Tech & Innovation Networking Mixer", date: "August 28, 2026", location: "Accra Digital Centre" }
+    {
+        title: "Business Bridge Summit 2026",
+        date: "August 15, 2026",
+        location: "ICGC Gbawe District"
+    },
+    {
+        title: "Keynote Presentation: My Business – Planning and Funding",
+        date: "August 15, 2026",
+        location: "Presented by Mr. Kojo Amoako"
+    },
+    {
+        title: "Business Bridge Instrument Launch",
+        date: "August 15, 2026",
+        location: "ET Business Club"
+    },
+    {
+        title: "Panel Discussion: Money, Investments & Business Management",
+        date: "August 15, 2026",
+        location: "Business Bridge Summit"
+    },
+    {
+        title: "Business Networking & Refreshments",
+        date: "August 15, 2026",
+        location: "Networking Session"
+    }
+];
     ];
 
     let html = '<ul>';
@@ -79,7 +103,7 @@ function displayForecast(data) {
     // Filter forecast to get midday readings (approx. every 24 hours)
     const dailyForecasts = data.list.filter(item => item.dt_txt.includes('12:00:00')).slice(0, 3);
 
-    let html = '<h2>3-Day Forecast</h2><ul style="list-style: none; padding: 0; margin: 0;">';
+    let html = '<h2>3-Day Weather Forecast</h2><ul style="list-style: none; padding: 0; margin: 0;">';
 
     dailyForecasts.forEach(day => {
         const date = new Date(day.dt * 1000).toLocaleDateString('en-US', { weekday: 'short' });
@@ -95,7 +119,7 @@ function displayForecast(data) {
 }
 
 // ============================================
-// 3. Company Spotlights Section
+// 3.  Featured Speakers / Partners
 // ============================================
 const spotlightsContainer = document.querySelector('.spotlights-main-box');
 
@@ -117,7 +141,7 @@ async function getSpotlights() {
         displaySpotlights(selected);
     } catch (error) {
         console.error('Error loading spotlights:', error);
-        spotlightsContainer.innerHTML = '<p>Spotlights currently unavailable.</p>';
+        spotlightsContainer.innerHTML = '<p>Featured speakers are currently unavailable.</p>';
     }
 }
 
@@ -156,11 +180,13 @@ function displaySpotlights(companies) {
                 <img src="${companyImage}" alt="${company.name} Logo" width="140" height="60" style="max-height: 60px; max-width: 140px; object-fit: contain;">
             </div>
             <h3 style="font-size: 1.1rem; margin: 5px 0; color: var(--yale-blue, #1e3a8a);">${company.name}</h3>
-            <p style="font-size: 0.85rem; color: #2563eb; font-weight: bold; margin: 4px 0;">Level ${company.membershipLevel} Member</p>
+            <p style="font-size: 0.85rem; color: #2563eb; font-weight: bold; margin: 4px 0;">
+            Featured Speaker
+            </p>
             <hr style="width: 100%; border: none; border-top: 1px solid #edf2f7; margin: 8px 0;">
             <p style="font-size: 0.85rem; color: #4a5568; margin: 3px 0;">${company.address}</p>
             <p style="font-size: 0.85rem; color: #4a5568; margin: 3px 0;">${company.phone}</p>
-            <a href="${company.website}" target="_blank" class="website-link" style="margin-top: 10px; display: inline-block; font-size: 0.9rem; font-weight: 600; text-decoration: none; color: #2563eb;">Website &rarr;</a>
+            <a href="${company.website}" target="_blank" class="website-link" style="margin-top: 10px; display: inline-block; font-size: 0.9rem; font-weight: 600; text-decoration: none; color: #2563eb;">View Profile &rarr;</a>
         `;
         spotlightsContainer.appendChild(card);
     });
