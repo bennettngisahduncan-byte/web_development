@@ -1,6 +1,6 @@
 /* ============================================
    WDD231 - Larger/Desktop Styles
-   Chamber of Commerce - Multi-Page
+   ET Business Club - Business Bridge Summit
    ============================================ */
 
 @media (min-width: 1024px) {
@@ -8,6 +8,7 @@
     /* ============================================
        Header & Navigation
        ============================================ */
+
     .box-logo-header {
         justify-content: flex-start;
         padding: 0 20px;
@@ -33,11 +34,20 @@
 
     nav a {
         padding: 12px 24px;
+        color: #0B5D3B;
+        font-weight: 600;
+    }
+
+    nav a:hover,
+    nav a.active {
+        background: #D4A017;
+        color: #ffffff;
     }
 
     /* ============================================
-       Main Base Layout
+       Main Layout
        ============================================ */
+
     main {
         max-width: 1200px;
         margin: 0 auto;
@@ -45,8 +55,9 @@
     }
 
     /* ============================================
-       Home Page Layout (Hero, Events, Spotlights)
+       Hero Section
        ============================================ */
+
     .hero-main-box {
         position: relative;
         margin-bottom: 30px;
@@ -64,44 +75,51 @@
         position: absolute;
         top: 50%;
         left: 40px;
-        right: auto;
-        bottom: auto;
         transform: translateY(-50%);
-        background-color: rgba(31, 46, 59, 0.85);
-        color: #ffffff;
-        padding: 25px;
+        background: rgba(11, 93, 59, .92);
+        color: #fff;
+        padding: 30px;
         border-radius: 10px;
-        max-width: 420px;
+        max-width: 430px;
         text-align: left;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 8px 18px rgba(0,0,0,.25);
     }
 
     .call-to-action h3 {
         margin-top: 0;
-        color: #ffffff;
-        font-size: 1.3rem;
+        color: #D4A017;
+        font-size: 1.5rem;
     }
 
     .call-to-action p {
-        font-size: 0.95rem;
-        line-height: 1.4;
+        line-height: 1.6;
+        font-size: .95rem;
     }
 
     .call-to-action button.join-us {
         display: inline-block;
-        margin-top: 10px;
-        padding: 10px 20px;
+        margin-top: 15px;
+        padding: 12px 24px;
         border: none;
-        border-radius: 5px;
+        border-radius: 6px;
         cursor: pointer;
         font-weight: bold;
-        background-color: #ffcc00;
-        color: #000;
+        background: #D4A017;
+        color: #fff;
+        transition: .3s;
     }
+
+    .call-to-action button.join-us:hover {
+        background: #0B5D3B;
+    }
+
+    /* ============================================
+       Event / Weather Boxes
+       ============================================ */
 
     .event-main-box {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: repeat(3,1fr);
         gap: 25px;
         margin-bottom: 40px;
     }
@@ -109,33 +127,56 @@
     .event-main,
     .weather-main,
     .weather-forecast {
-        background-color: #ffffff;
-        border-radius: 8px;
+        background: #ffffff;
+        border-radius: 10px;
         padding: 20px;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-        border-top: 4px solid #0d3b66;
+        box-shadow: 0 5px 18px rgba(0,0,0,.08);
+        border-top: 5px solid #D4A017;
     }
 
     .event-main h2,
     .weather-main h2,
     .weather-forecast h2 {
         margin-top: 0;
+        color: #0B5D3B;
+        border-bottom: 2px solid #D4A017;
+        padding-bottom: 8px;
         font-size: 1.2rem;
-        color: #0d3b66;
-        border-bottom: 2px solid #f4d35e;
-        padding-bottom: 6px;
     }
+
+    /* ============================================
+       Spotlight Cards
+       ============================================ */
 
     .spotlights-main-box {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3,1fr);
         gap: 25px;
         margin-bottom: 40px;
     }
 
+    .spotlight-card {
+        border-top: 5px solid #0B5D3B !important;
+        transition: .3s;
+    }
+
+    .spotlight-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 10px 24px rgba(0,0,0,.15);
+    }
+
+    .spotlight-card h3 {
+        color: #0B5D3B !important;
+    }
+
+    .website-link {
+        color: #D4A017 !important;
+    }
+
     /* ============================================
-       Join Page Desktop Layout
+       Join Page
        ============================================ */
+
     .join-container {
         display: grid;
         grid-template-columns: 1.2fr 1fr;
@@ -144,8 +185,9 @@
     }
 
     /* ============================================
-       Discover Page Desktop Layout (Named Grid Areas)
+       Discover Page
        ============================================ */
+
     #discover-page .discover {
         display: grid;
         grid-template-columns: 250px 1fr;
@@ -159,6 +201,7 @@
 
     #discover-page .Main-title {
         grid-area: title;
+        color: #0B5D3B;
     }
 
     #discover-page .side-bar {
@@ -166,6 +209,16 @@
         display: flex;
         flex-direction: column;
         gap: 20px;
+    }
+
+    .article-01,
+    .article-02,
+    .article-03 {
+        background: #ffffff;
+        border-top: 5px solid #D4A017;
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 5px 15px rgba(0,0,0,.08);
     }
 
     #calendar {
@@ -176,20 +229,27 @@
     #card-container {
         grid-area: cards;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2,1fr);
         gap: 1.5rem;
     }
 
     /* ============================================
-       Footer Layout
+       Footer
        ============================================ */
+
     footer {
         display: flex;
         justify-content: space-around;
         align-items: center;
-        padding: 30px 20px;
+        padding: 35px 20px;
         flex-wrap: wrap;
         gap: 20px;
+        background: #0B5D3B;
+        color: #ffffff;
+    }
+
+    footer p {
+        color: #ffffff;
     }
 
     .footer-info,
@@ -202,37 +262,61 @@
     .social {
         display: flex;
         justify-content: center;
-        gap: 15px;
+        gap: 18px;
+    }
+
+    .social a {
+        color: #D4A017;
+        transition: .3s;
+    }
+
+    .social a:hover {
+        color: #ffffff;
     }
 }
 
 /* ============================================
-   Tablet View (Medium Screens: min-width: 768px)
+   Tablet View
    ============================================ */
-@media screen and (min-width: 768px) {
-    #discover-page .discover {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+
+@media screen and (min-width:768px){
+
+    #discover-page .discover{
+        display:grid;
+        grid-template-columns:1fr 1fr;
         grid-template-areas:
-            "title title"
-            "sidebar cards";
-        gap: 1.5rem;
+        "title title"
+        "sidebar cards";
+        gap:1.5rem;
     }
+
 }
 
 /* ============================================
-   Image Hover Effect (Medium & Large Screens Only)
+   Image Hover Effects
    ============================================ */
-@media screen and (min-width: 641px) {
+
+@media screen and (min-width:641px){
 
     .local-photos img,
-    .discover-card img {
-        transition: transform 0.3s ease, filter 0.3s ease;
+    .discover-card img{
+
+        transition:
+        transform .35s ease,
+        filter .35s ease,
+        box-shadow .35s ease;
+
     }
 
     .local-photos img:hover,
-    .discover-card img:hover {
-        transform: scale(1.03);
-        filter: brightness(1.05);
+    .discover-card img:hover{
+
+        transform:scale(1.04);
+
+        filter:brightness(1.05);
+
+        box-shadow:0 10px 25px rgba(0,0,0,.18);
+
     }
+
 }
