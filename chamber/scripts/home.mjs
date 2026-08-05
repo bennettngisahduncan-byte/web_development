@@ -36,24 +36,26 @@ const apiKey = 'f84ac1046911cf31a1025ac3a55ea564';
 
 async function getWeather() {
     if (!weatherMainContainer) return;
-
     const currentWeatherUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
     const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
 
     try {
         // Fetch Current Weather
-        const responseCurrent = await fetch(currentWeatherUrl);
-        if (responseCurrent.ok) {
-            const dataCurrent = await responseCurrent.json();
-            displayCurrentWeather(dataCurrent);
-        }
 
-        // Fetch Weather Forecast
-        const responseForecast = await fetch(forecastUrl);
-        if (responseForecast.ok) {
-            const dataForecast = await responseForecast.json();
-            displayForecast(dataForecast);
-        }
+        const responseCurrent = await fetch(currentWeatherUrl);
+if (!responseCurrent.ok) {
+    throw new Error("Unable to load current weather.");
+}
+const dataCurrent = await responseCurrent.json();
+displayCurrentWeather(dataCurrent);
+
+const responseForecast = await fetch(forecastUrl);
+if (!responseForecast.ok) {
+    throw new Error("Unable to load forecast.");
+}
+const dataForecast = await responseForecast.json();
+displayForecast(dataForecast);
+
     } catch (error) {
         console.error('Error fetching weather data:', error);
         weatherMainContainer.innerHTML = '<p>Weather data unavailable.</p>';
@@ -67,7 +69,7 @@ function displayCurrentWeather(data) {
 
     // 2. Build your weather HTML, adding explicit width and height to prevent layout shifts
     weatherMainContainer.innerHTML = `
-        <h3>Current Weather</h3>
+        <h2>Current Weather</h2>
         <div style="display: flex; align-items: center; gap: 10px;">
             <img src="${iconUrl}" alt="${description}" width="50" height="50">
             <p style="font-size: 1.2rem; font-weight: bold; margin: 0;">${Math.round(data.main.temp)}&deg;C</p>
@@ -171,4 +173,5 @@ document.addEventListener('DOMContentLoaded', () => {
     loadEvents();
     getWeather();
     getSpotlights();
+
 });
