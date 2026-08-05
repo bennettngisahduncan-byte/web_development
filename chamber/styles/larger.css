@@ -38,17 +38,23 @@
         max-width: 200px;
         border-bottom: none;
     }
-
-    nav a {
+    nav ul li a.nav-a,
+    nav ul li a.nav-a:link,
+    nav ul li a.nav-a:visited {
+        display: block;
         padding: 12px 24px;
         color: #ffffff;
-    }
+        text-decoration: none;
+}
 
-    nav a:hover,
-    nav a.active {
+nav ul li a.nav-a:hover,
+nav ul li a.nav-a:focus,
+nav ul li a.nav-a.active {
     background-color: #D4A017;
     color: #0B5D3B;
 }
+
+ 
 
     /* ============================================
        Main Base Layout
@@ -195,17 +201,19 @@
         color: #0B5D3B;
     }
 
-    #discover-page .side-bar {
-        grid-area: sidebar;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        .article-01,
-        .article-02,
-        .article-03 {
-        border-top: 5px solid #D4A017;
+   #discover-page .side-bar {
+    grid-area: sidebar;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
-    }
+    #discover-page .side-bar .article-01,
+    #discover-page .side-bar .article-02,
+    #discover-page .side-bar .article-03 {
+    border-top: 5px solid #D4A017;
+}
+
+
 
     #calendar {
         width: 100%;

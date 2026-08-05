@@ -112,6 +112,10 @@ header {
 }
 
 /* Navigation Mobile Hidden State */
+nav {
+    background-color: #0B4F2F;
+}
+
 nav ul {
     list-style: none;
     margin: 0;
@@ -120,23 +124,28 @@ nav ul {
     display: none;
 }
 
-/* Open state toggled by JS */
+/* Open state toggled by JavaScript */
 nav ul.open {
     display: flex;
     flex-direction: column;
 }
 
-nav a {
+/* Navigation Links */
+nav ul li a.nav-a,
+nav ul li a.nav-a:link,
+nav ul li a.nav-a:visited {
     display: block;
     padding: 12px 20px;
-    color: var(--alice-blue);
+    color: #ffffff;
     text-decoration: none;
     font-family: var(--poppins);
-    transition: background-color 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-nav a:hover,
-nav a.active {
+/* Hover and Active Navigation */
+nav ul li a.nav-a:hover,
+nav ul li a.nav-a:focus,
+nav ul li a.nav-a.active {
     background-color: #D4A017;
     color: #0B4F2F;
 }
