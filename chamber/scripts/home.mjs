@@ -68,14 +68,23 @@ function displayCurrentWeather(data) {
     const description = data.weather[0].description;
 
     // 2. Build your weather HTML, adding explicit width and height to prevent layout shifts
-    weatherMainContainer.innerHTML = `
-        <h2>Current Weather</h2>
-        <div style="display: flex; align-items: center; gap: 10px;">
-            <img src="${iconUrl}" alt="${description}" width="50" height="50">
-            <p style="font-size: 1.2rem; font-weight: bold; margin: 0;">${Math.round(data.main.temp)}&deg;C</p>
-        </div>
-        <p style="text-transform: capitalize; margin-top: 5px;">${description}</p>
-    `;
+     weatherMainContainer.innerHTML = `
+    <h2>Current Weather</h2>
+
+    <div class="weather-content">
+     <img class="weather-icon"
+         src="${iconUrl}"
+         alt="${description}"
+         width="60"
+         height="60">
+
+    <div>
+        <p class="weather-temp">${Math.round(data.main.temp)}°C</p>
+        <p class="weather-desc">${description}</p>
+    </div>
+</div>
+`;
+
 }
 function displayForecast(data) {
     // Filter forecast to get midday readings (approx. every 24 hours)
