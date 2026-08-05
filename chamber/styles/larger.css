@@ -24,6 +24,14 @@
         gap: 0;
     }
 
+    nav {
+    background-color: #0B5D3B;
+}
+
+    nav ul {
+    background-color: #0B5D3B;
+}
+
     nav ul li {
         display: block !important;
         flex: 1 1 auto;
@@ -33,8 +41,14 @@
 
     nav a {
         padding: 12px 24px;
-        color: #0B5D3B;
+        color: #ffffff;
     }
+
+    nav a:hover,
+    nav a.active {
+    background-color: #D4A017;
+    color: #0B5D3B;
+}
 
     /* ============================================
        Main Base Layout
