@@ -127,3 +127,55 @@ if (calendarBody) {
         calendarBody.appendChild(row);
     }
 }
+
+function createCalendar() {
+
+    const calendarBody = document.getElementById("calendar-body");
+
+    const today = new Date();
+
+    const year = today.getFullYear();
+
+    const month = today.getMonth();
+
+    // Change this to the summit day
+    const summitDay = 23;
+
+    const firstDay = new Date(year, month, 1).getDay();
+
+    const totalDays = new Date(year, month + 1, 0).getDate();
+
+    let row = document.createElement("tr");
+
+    // Empty cells
+    for (let i = 0; i < firstDay; i++) {
+        row.appendChild(document.createElement("td"));
+    }
+
+    for (let day = 1; day <= totalDays; day++) {
+
+        if (row.children.length === 7) {
+            calendarBody.appendChild(row);
+            row = document.createElement("tr");
+        }
+
+        const cell = document.createElement("td");
+        cell.textContent = day;
+
+        if (day === summitDay) {
+            cell.classList.add("today");
+            cell.title = "Business Bridge Summit";
+        }
+
+        row.appendChild(cell);
+    }
+
+    while (row.children.length < 7) {
+        row.appendChild(document.createElement("td"));
+    }
+
+    calendarBody.appendChild(row);
+
+}
+
+createCalendar();

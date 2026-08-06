@@ -484,10 +484,10 @@ footer {
 
 /* Today's Date Highlight on Calendar */
 #calendar td.today {
-    background-color: #002244;
-    color: #ffffff;
+    background-color:  #D4A017;
+    color: white;
     font-weight: bold;
-    border-radius: 4px;
+    border-radius: 5px;
 }
 
 .local-photos {
@@ -1699,4 +1699,29 @@ footer p {
     font-size: .8rem;
     border-radius: 20px;
     text-transform: uppercase;
+}
+
+/* ============================================
+   Event Information Card
+============================================ */
+
+.event-info {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.event-info li {
+    padding: 12px 0;
+    border-bottom: 1px dashed var(--cool-gray);
+    line-height: 1.6;
+}
+
+.event-info li:last-child {
+    border-bottom: none;
+}
+
+.event-info strong {
+    color: #0B4F2F;
+    font-family: var(--poppins);
 }
