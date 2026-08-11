@@ -1,6 +1,8 @@
 import { discoverItems } from '../data/discover.mjs';
 
-// 1. Render the 8 Items of Interest dynamically into the card container
+// ==========================================
+// 1. Render the Items of Interest Dynamically
+// ==========================================
 const cardContainer = document.getElementById('card-container');
 
 if (cardContainer) {
@@ -32,7 +34,9 @@ if (cardContainer) {
     });
 }
 
-// 2. Handle LocalStorage Visitor Message Logic (Fixed to use pre-existing HTML node to prevent layout shifts)
+// ==========================================
+// 2. Handle LocalStorage Visitor Message Logic
+// ==========================================
 const visitorMessageContainer = document.getElementById('visitor-message');
 
 const lastVisitKey = 'accra_chamber_last_visit';
@@ -61,99 +65,36 @@ if (visitorMessageContainer) {
 }
 localStorage.setItem(lastVisitKey, currentTimestamp);
 
-// 3. Dynamic Calendar Builder (Highlights Today)
-const calendarBody = document.querySelector('#calendar tbody');
-if (calendarBody) {
-    calendarBody.innerHTML = ''; // Clear prior rows
-
-    const todayObj = new Date();
-    const currentYear = todayObj.getFullYear();
-    const currentMonth = todayObj.getMonth();
-    const currentDay = todayObj.getDate();
-
-    // Set for current year/month
-    const year = 2026;
-    const month = 7; // August is month 7 (0-indexed)
-
-    const firstDayIndex = new Date(year, month, 1).getDay();
-    const totalDays = new Date(year, month + 1, 0).getDate();
-
-    let date = 1;
-    let row = document.createElement('tr');
-
-    // Fill in blank spots before the 1st of the month
-    for (let i = 0; i < firstDayIndex; i++) {
-        let cell = document.createElement('td');
-        row.appendChild(cell);
-    }
-
-    // Fill in the days of the month (First Row)
-    for (let i = firstDayIndex; i < 7; i++) {
-        if (date <= totalDays) {
-            let cell = document.createElement('td');
-            cell.textContent = date;
-
-            // Check if this cell is today's date
-            if (date === currentDay && month === currentMonth && year === currentYear) {
-                cell.classList.add('today');
-            }
-
-            row.appendChild(cell);
-            date++;
-        }
-    }
-    calendarBody.appendChild(row);
-
-    // Build the rest of the rows
-    while (date <= totalDays) {
-        row = document.createElement('tr');
-        for (let i = 0; i < 7; i++) {
-            if (date <= totalDays) {
-                let cell = document.createElement('td');
-                cell.textContent = date;
-
-                // Check if this cell is today's date
-                if (date === currentDay && month === currentMonth && year === currentYear) {
-                    cell.classList.add('today');
-                }
-
-                row.appendChild(cell);
-                date++;
-            } else {
-                let cell = document.createElement('td');
-                row.appendChild(cell);
-            }
-        }
-        calendarBody.appendChild(row);
-    }
-}
-
+// ==========================================
+// 3. Dynamic Calendar Builder (August 2026 Summit)
+// ==========================================
 function createCalendar() {
-
     const calendarBody = document.getElementById("calendar-body");
+    if (!calendarBody) return; // Exit gracefully if table doesn't exist
+
+    calendarBody.innerHTML = ""; // Clear prior rows
 
     const today = new Date();
+    const currentYear = today.getFullYear();
+    const currentMonth = today.getMonth();
+    const currentDay = today.getDate();
 
-    const year = today.getFullYear();
-
-    const month = today.getMonth();
-
-    // Change this to the summit day
-    const summitDay = 23;
+    // Summit context: August 2026
+    const year = 2026;
+    const month = 7; // August is month index 7
+    const summitDay = 15; // Matching Saturday, 15 August 2026
 
     const firstDay = new Date(year, month, 1).getDay();
-
     const totalDays = new Date(year, month + 1, 0).getDate();
 
     let row = document.createElement("tr");
 
-    // Empty cells
+    // Empty cells for days before the 1st of the month
     for (let i = 0; i < firstDay; i++) {
         row.appendChild(document.createElement("td"));
     }
 
     for (let day = 1; day <= totalDays; day++) {
-
         if (row.children.length === 7) {
             calendarBody.appendChild(row);
             row = document.createElement("tr");
@@ -162,20 +103,26 @@ function createCalendar() {
         const cell = document.createElement("td");
         cell.textContent = day;
 
+        // Highlight actual real-world current day if matching
+        if (day === currentDay && month === currentMonth && year === currentYear) {
+            cell.classList.add("current-day");
+        }
+
+        // Highlight the Summit Event Day
         if (day === summitDay) {
             cell.classList.add("today");
-            cell.title = "Business Bridge Summit";
+            cell.title = "Business Bridge Summit 2026";
         }
 
         row.appendChild(cell);
     }
 
-    while (row.children.length < 7) {
+    // Pad remaining empty cells in the final row
+    while (row.children.length > 0 && row.children.length < 7) {
         row.appendChild(document.createElement("td"));
     }
 
     calendarBody.appendChild(row);
-
 }
 
 createCalendar();
