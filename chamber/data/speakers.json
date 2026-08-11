@@ -5,7 +5,7 @@
     "position": "Lead Consultant, Tebeldi Academy",
     "website": "https://tebeldiacademy.com",
     "image": "kojo-amoako.webp",
-    "description": "Presenter of the keynote address: 'My Business: Planning and Funding'. Panelist on Money, Investments and Business Management."
+    "description": "Entrepreneur, operator, and founder of Vantage Medical Solutions and Tebeldi with over 14 years scaling businesses across healthcare, fintech, and telecom. Presenter of the keynote address: 'My Business: Planning and Funding'."
   },
   {
     "name": "Mrs. Eugenia Addo",
@@ -13,7 +13,15 @@
     "position": "Head, SME & Support, Access Bank Ghana",
     "website": "https://www.accessbankplc.com",
     "image": "eugenia-addo.webp",
-    "description": "Panelist discussing SME financing, business support services, and strategic business growth."
+    "description": "SME banking expert driving growth through strategic leadership, customized SME products, and impactful partnerships that foster economic development."
+  },
+  {
+    "name": "Mr. Cedric Amihere",
+    "role": "Panelist",
+    "position": "Entrepreneur / Chartered Accountant",
+    "website": "#",
+    "image": "cedric-amihere.webp",
+    "description": "Chartered accountant and former CFO of Allianz Life Insurance Ghana with deep expertise in financial accounting, taxation laws, treasury management, and IFRS standards."
   },
   {
     "name": "Mr. Makafui Tsikata",
@@ -26,10 +34,10 @@
   {
     "name": "Mary A. Serwa Dickson",
     "role": "Panelist",
-    "position": "Team Lead, Woman On A Mission",
+    "position": "Marketing Tech Consultant, Woman On A Mission",
     "website": "#",
     "image": "mary-serwa-dickson.webp",
-    "description": "Panelist focusing on leadership, entrepreneurship, and empowering businesses for sustainable growth."
+    "description": "Marketing tech consultant helping African businesses and women entrepreneurs leverage lean systems and faith-based strategies for scalable visibility and sales."
   },
   {
     "name": "Lady Perpetual Meg Annan",
@@ -79,5 +87,4 @@
     "image": "rev-priscilla.webp",
     "description": "Delivers the official welcome remarks during the opening ceremony of the Business Bridge Summit."
   }
-  
 ]
